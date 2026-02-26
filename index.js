@@ -1,3 +1,4 @@
+console.log("🚀 Aplicação iniciando...");
 require("dotenv").config();
 
 const express = require("express");
@@ -188,6 +189,6 @@ app.listen(PORT, "0.0.0.0", () => {
 /* ===========================
    LOGIN DISCORD
 =========================== */
-
+console.log("Token existe?", !!process.env.DISCORD_TOKEN);
 console.log("Token carregado:", process.env.DISCORD_TOKEN ? "SIM" : "NÃO");
 client.login(process.env.DISCORD_TOKEN);
