@@ -54,7 +54,7 @@ client.on("messageCreate", async (message) => {
         "https://api.pushinpay.com.br/api/pix/cashIn",
         {
           value: Number(valor) * 100,
-          webhook_url: "https://sirenlike-unneural-marielle.ngrok-free.dev/webhook"
+          webhook_url: "https://bot-pix-vrnl.onrender.com/webhook"
         },
         {
           headers: {
@@ -175,8 +175,10 @@ app.post("/webhook", async (req, res) => {
    SERVIDOR
 =========================== */
 
-app.listen(3000, () => {
-  console.log("🌐 Webhook rodando na porta 3000");
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`🌐 Webhook rodando na porta ${PORT}`);
 });
 
 
