@@ -175,12 +175,15 @@ app.post("/webhook", async (req, res) => {
    SERVIDOR
 =========================== */
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT;
 
-app.listen(PORT, "0.0.0.0", () => {
-  console.log(`🌐 Webhook rodando na porta ${PORT}`);
+app.get("/", (req, res) => {
+  res.send("Bot online 🚀");
 });
 
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`🌐 Servidor rodando na porta ${PORT}`);
+});
 
 /* ===========================
    LOGIN DISCORD
