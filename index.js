@@ -186,4 +186,5 @@ app.listen(PORT, () => {
    LOGIN DISCORD
 =========================== */
 
+console.log("Token carregado:", process.env.DISCORD_TOKEN ? "SIM" : "NÃO");
 client.login(process.env.DISCORD_TOKEN);
