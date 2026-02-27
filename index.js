@@ -1,4 +1,4 @@
-console.log("🚀 Aplicação iniciando...");
+console.log("🔥🔥🔥 VERSÃO NOVA DO INDEX 🔥🔥🔥");
 require("dotenv").config();
 
 const express = require("express");
@@ -200,3 +200,7 @@ console.log("Token carregado:", process.env.DISCORD_TOKEN ? "SIM" : "NÃO");
     console.error(err);
   }
 })();
+
+setInterval(() => {
+  console.log("💓 Bot ainda está rodando...");
+}, 30000);
