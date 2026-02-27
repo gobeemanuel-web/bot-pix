@@ -189,12 +189,14 @@ app.listen(PORT, "0.0.0.0", () => {
 /* ===========================
    LOGIN DISCORD
 =========================== */
-client.on("ready", () => {
-  console.log(`✅ Bot online como ${client.user.tag}`);
-});
-
 console.log("Token carregado:", process.env.DISCORD_TOKEN ? "SIM" : "NÃO");
 
-client.login(process.env.DISCORD_TOKEN)
-  .then(() => console.log("Login feito com sucesso"))
-  .catch(err => console.error("Erro no login:", err));
+(async () => {
+  try {
+    const login = await client.login(process.env.DISCORD_TOKEN);
+    console.log("Login feito com sucesso:", login);
+  } catch (err) {
+    console.error("🔥 ERRO REAL NO LOGIN:");
+    console.error(err);
+  }
+})();
