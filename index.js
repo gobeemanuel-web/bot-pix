@@ -55,7 +55,7 @@ client.on("messageCreate", async (message) => {
         "https://api.pushinpay.com.br/api/pix/cashIn",
         {
           value: Number(valor) * 100,
-          webhook_url: "https://bot-pix-vrnl.onrender.com/webhook"
+          webhook_url: "https://bot-pix-production.up.railway.app/webhook"
         },
         {
           headers: {
