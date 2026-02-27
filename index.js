@@ -193,6 +193,8 @@ client.on("ready", () => {
   console.log(`✅ Bot online como ${client.user.tag}`);
 });
 
+console.log("Token carregado:", process.env.DISCORD_TOKEN ? "SIM" : "NÃO");
+
 client.login(process.env.DISCORD_TOKEN)
   .then(() => console.log("Login feito com sucesso"))
   .catch(err => console.error("Erro no login:", err));
